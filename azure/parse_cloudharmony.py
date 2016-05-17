@@ -25,8 +25,10 @@ if __name__ == '__main__':
 
     # Analizamos solo el primer resultado    
     tbl_all = tbls[0]
-    tbl_azure = tbl_all[ tbl_all['Service'].str.contains("Azure") ]
-    
     # La tabla del archivo solo contiene una parte de tests hechos con el
     # SpecINT    
-    tbl_azure.to_csv('./azure/data/azure_vm_performance.csv', index=False, encoding='UTF-8')
+    tbl_azure = tbl_all[ tbl_all['Service'].str.contains("Azure") ]
+    
+    tbl_azure['instance_type'] = tbl_azure.loc[:, 'Instance Type'].str.extract(r'([A-Za-z0-9]+) - ')    
+    
+    tbl_azure.to_csv('./azure/data/azure_vm_benchmarks_cloudharmony.csv', index=False, encoding='UTF-8')
