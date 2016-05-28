@@ -29,4 +29,4 @@ if __name__ == '__main__':
     
     # La tabla del archivo solo contiene una parte de tests hechos con el
     # SpecINT    
-    tbl_azure.to_csv('./azure/data/azure_vm_performance.csv', index=False, encoding='UTF-8')
+    tbl_azure.to_csv('azure/data/azure_vm_performance.csv', index=False, encoding='UTF-8')

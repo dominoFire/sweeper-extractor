@@ -38,3 +38,6 @@ dist/
 
 # Spyder project files
 .spyderproject
+*.publishsettings
+*.pem
+*.cer

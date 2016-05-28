@@ -39,8 +39,8 @@ def tier_name(x):
 
 
 if __name__ == '__main__':
-    prices = pd.read_csv('./data/azure_pricing_vm_common.csv')
-    roles = pd.read_csv('./data/azure_role_sizes.csv')
+    prices = pd.read_csv('./azure/data/azure_pricing_vm_common.csv')
+    roles = pd.read_csv('./azure/data/azure_role_sizes.csv')
     
     # Only we need a subset, using us-west region
     prices = prices[prices.region == 'us-west']
@@ -64,4 +64,4 @@ if __name__ == '__main__':
     print ("Merged")
     print (merged.head(3))
 
-    merged.to_csv('./data/azure_role_pricing.csv', encoding='utf-8', index=None)
+    merged.to_csv('./azure/data/azure_role_pricing.csv', encoding='utf-8', index=None)
