@@ -1,2 +1,9 @@
 html5lib
 beautifulsoup4
+pandas
+selenium
+azure==2.0.0rc3
+
+# Si usas anaconda, actualiza setuptools antes de instalar pyopenssl
+pyopenssl
+

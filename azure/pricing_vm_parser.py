@@ -69,10 +69,10 @@ if __name__ == '__main__':
 
             print('{0}: {1}'.format(title, df.shape))
 
-    if not os.path.exists('./data'):
-        os.mkdir('./data')
+    if not os.path.exists('./azure/data'):
+        os.mkdir('./azure/data')
 
-    save_df_list(suse_list, './data/azure_pricing_vm_suse.csv')
-    save_df_list(pricing_list, './data/azure_pricing_vm_common.csv')
+    save_df_list(suse_list, './azure/data/azure_pricing_vm_suse.csv')
+    save_df_list(pricing_list, './azure/data/azure_pricing_vm_common.csv')
 
     driver.close()
