@@ -16,7 +16,7 @@ if __name__ == '__main__':
     pem_file = './azure/certs/azure_client.pem'
 
     subscription_id = get_certificate_from_publish_settings(
-        publish_settings_path='./azure/certs/BizSpark-5-28-2016-credentials.publishsettings',
+        publish_settings_path='./azure/certs/subscription.publishsettings',
         path_to_write_certificate=pem_file,
         subscription_id=subscription_id
     )
