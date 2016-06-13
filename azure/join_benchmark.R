@@ -1,4 +1,4 @@
-source('scripts/functions.R')
+source('azure/functions.R')
 
 fnames = file('data/names.txt')
 benchs.names = readLines(fnames, n = -1)
