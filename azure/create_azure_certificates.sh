@@ -16,8 +16,12 @@ lenovo
 fernando.aguilar@pulsarcloud.ml
 EOF
 
+echo
+
 # creates certificate file (public key) in DER
 openssl x509 -inform pem -in $CERT_NAME.pem -outform der -out $CERT_NAME.cer
+
+echo
 
 # https://www.lisenet.com/2014/convert-p7b-to-pfx-with-openssl/
 #openssl req -new -x509 -days 365 -sha256 -nodes -out cert.cer -keyout cert.key
